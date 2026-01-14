@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e23d9da2183e4c398a762927d5d2ce59",
+    "content-hash": "5eab37b227447188e79eee98a9b63ccc",
     "packages": [
         {
             "name": "guzzlehttp/guzzle",
@@ -336,16 +336,16 @@
         },
         {
             "name": "payfast/payfast-common",
-            "version": "v1.3.1",
+            "version": "v1.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Payfast/payfast-common.git",
-                "reference": "c2ca2ad20999add309944098b488f8bafbafcf41"
+                "reference": "775d9ca164dee271e4465c471e7e380fd70a5ba1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Payfast/payfast-common/zipball/c2ca2ad20999add309944098b488f8bafbafcf41",
-                "reference": "c2ca2ad20999add309944098b488f8bafbafcf41",
+                "url": "https://api.github.com/repos/Payfast/payfast-common/zipball/775d9ca164dee271e4465c471e7e380fd70a5ba1",
+                "reference": "775d9ca164dee271e4465c471e7e380fd70a5ba1",
                 "shasum": ""
             },
             "require": {
@@ -372,9 +372,9 @@
             "homepage": "https://github.com/PayFast/payfast-common",
             "support": {
                 "issues": "https://github.com/Payfast/payfast-common/issues",
-                "source": "https://github.com/Payfast/payfast-common/tree/v1.3.1"
+                "source": "https://github.com/Payfast/payfast-common/tree/v1.4.0"
             },
-            "time": "2025-04-03T13:05:54+00:00"
+            "time": "2025-04-04T22:46:44+00:00"
         },
         {
             "name": "psr/http-client",
@@ -632,7 +632,7 @@
             "description": "A generic function and convention to trigger deprecation notices",
             "homepage": "https://symfony.com",
             "support": {
-                "source": "https://github.com/symfony/deprecation-contracts/tree/main"
+                "source": "https://github.com/symfony/deprecation-contracts/tree/v3.6.0"
             },
             "funding": [
                 {

@@ -132,7 +132,7 @@ class EEG_Payfast extends EE_Offsite_Gateway
                 "pfSoftwareName"       => 'Event Espresso',
                 "pfSoftwareVer"        => '5.0.37',
                 "pfSoftwareModuleName" => 'Payfast-EventEspresso',
-                "pfModuleVer"          => '1.2.1',
+                "pfModuleVer"          => '1.3.0',
             ];
             $pfValid    = $payfastRequest->pfValidData($moduleInfo, $pfHost, $pfParamString);
 
@@ -235,7 +235,7 @@ class EEG_Payfast extends EE_Offsite_Gateway
                     'message' => __(
                         'Could not update transaction based on payment because the payment
                          details have not yet been put on the payment.
-                         This normally happens during the IPN or returning from Payfast',
+                         This normally happens during the IPN or returning from Payfast Aggregation',
                         'event_espresso'
                     ),
                     'payment' => $payment->model_field_array()
@@ -279,7 +279,7 @@ class EEG_Payfast extends EE_Offsite_Gateway
                     array(
                         'message'  => sprintf(
                             __(
-                                'It appears we have received a duplicate IPN from Payfast for payment %d',
+                                'It appears we have received a duplicate IPN from Payfast Aggregation for payment %d',
                                 'event_espresso'
                             ),
                             $payment->ID()
@@ -298,7 +298,7 @@ class EEG_Payfast extends EE_Offsite_Gateway
                     array(
                         'message'  => sprintf(
                             __(
-                                'Updated payment either from IPN or as part of POST from Payfast',
+                                'Updated payment either from IPN or as part of POST from Payfast Aggregation',
                                 'event_espresso'
                             )
                         ),
