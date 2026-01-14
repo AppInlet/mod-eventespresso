@@ -1,13 +1,5 @@
 <?php
 
-/**
- * Copyright (c) 2025 Payfast (Pty) Ltd
- * You (being anyone who is not PayFast (Pty) Ltd) may download and use this plugin / code in your own website in
- * conjunction with a registered and active Payfast account. If your Payfast account is terminated for any reason,
- * you may not use this plugin / code or part thereof. Except as expressly indicated in this licence, you may not use,
- * copy, modify or distribute this plugin / code or part thereof in any way.
- */
-
 namespace Payfast\PayfastCommon\Aggregator\Request;
 
 class PaymentRequest
@@ -526,7 +518,7 @@ class PaymentRequest
      *
      * @return void
      */
-    public static function createTransaction($payArray, $passphrase = null, bool $testMode = false): void
+    public static function createTransaction($payArray, $passphrase = null, bool $testMode = false, $returnForm = false)
     {
         $url = $testMode ? 'https://sandbox.payfast.co.za/eng/process' : 'https://www.payfast.co.za/eng/process';
 
@@ -549,7 +541,7 @@ class PaymentRequest
             $inputs .= '<input type="hidden" name="' . $k . '" value="' . $v . '"/>';
         }
 
-        echo <<<EOT
+        $form = <<<HTML
     <html lang="en">
     <body onLoad="document.payfast_form.submit();">
         <form action="$url" method="post" name="payfast_form">
@@ -557,6 +549,12 @@ class PaymentRequest
         </form>
     </body>
     </html>
-EOT;
+HTML;
+
+        if ($returnForm) {
+            return $responseData = ['form' => $form, 'secureString' => $secureString, 'securityHash' => $securityHash];
+        } else {
+            echo $form;
+        }
     }
 }

@@ -9,6 +9,6 @@
   },
   "minimum-stability": "dev",
   "require": {
-    "payfast/payfast-common": "v1.3.1"
+    "payfast/payfast-common": "v1.4.0"
   }
 }
